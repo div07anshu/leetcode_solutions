@@ -35,14 +35,17 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0523-continuous-subarray-sum](https://github.com/div07anshu/leetcode_solutions/tree/master/0523-continuous-subarray-sum) |
+| [2300-successful-pairs-of-spells-and-potions](https://github.com/div07anshu/leetcode_solutions/tree/master/2300-successful-pairs-of-spells-and-potions) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/div07anshu/leetcode_solutions/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## Two Pointers
 |  |
 | ------- |
+| [2300-successful-pairs-of-spells-and-potions](https://github.com/div07anshu/leetcode_solutions/tree/master/2300-successful-pairs-of-spells-and-potions) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/div07anshu/leetcode_solutions/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## Binary Search
 |  |
 | ------- |
+| [2300-successful-pairs-of-spells-and-potions](https://github.com/div07anshu/leetcode_solutions/tree/master/2300-successful-pairs-of-spells-and-potions) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/div07anshu/leetcode_solutions/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## Dynamic Programming
 |  |
@@ -60,6 +63,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sorting
 |  |
 | ------- |
+| [2300-successful-pairs-of-spells-and-potions](https://github.com/div07anshu/leetcode_solutions/tree/master/2300-successful-pairs-of-spells-and-potions) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/div07anshu/leetcode_solutions/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## Topological Sort
 |  |
