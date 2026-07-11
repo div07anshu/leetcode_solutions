@@ -6,20 +6,24 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0684-redundant-connection](https://github.com/div07anshu/leetcode_solutions/tree/master/0684-redundant-connection) |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/div07anshu/leetcode_solutions/tree/master/0947-most-stones-removed-with-same-row-or-column) |
+| [2685-count-the-number-of-complete-components](https://github.com/div07anshu/leetcode_solutions/tree/master/2685-count-the-number-of-complete-components) |
 ## Breadth-First Search
 |  |
 | ------- |
 | [0684-redundant-connection](https://github.com/div07anshu/leetcode_solutions/tree/master/0684-redundant-connection) |
+| [2685-count-the-number-of-complete-components](https://github.com/div07anshu/leetcode_solutions/tree/master/2685-count-the-number-of-complete-components) |
 ## Union-Find
 |  |
 | ------- |
 | [0684-redundant-connection](https://github.com/div07anshu/leetcode_solutions/tree/master/0684-redundant-connection) |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/div07anshu/leetcode_solutions/tree/master/0947-most-stones-removed-with-same-row-or-column) |
+| [2685-count-the-number-of-complete-components](https://github.com/div07anshu/leetcode_solutions/tree/master/2685-count-the-number-of-complete-components) |
 ## Graph Theory
 |  |
 | ------- |
 | [0684-redundant-connection](https://github.com/div07anshu/leetcode_solutions/tree/master/0684-redundant-connection) |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/div07anshu/leetcode_solutions/tree/master/0947-most-stones-removed-with-same-row-or-column) |
+| [2685-count-the-number-of-complete-components](https://github.com/div07anshu/leetcode_solutions/tree/master/2685-count-the-number-of-complete-components) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/div07anshu/leetcode_solutions/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## Hash Table
 |  |
