@@ -12,13 +12,13 @@ public:
             int pos = m;
 
             while (l <= h) {
-                int m = l + (h - l) / 2;
+                int mid = l + (h - l) / 2;
 
-                if (1LL * s[i] * p[m] >= suc) {
-                    pos = m;
-                    h = m - 1;
+                if (1LL * s[i] * p[mid] >= suc) {
+                    pos = mid;
+                    h = mid - 1;
                 } else {
-                    l = m + 1;
+                    l = mid + 1;
                 }
             }
 
