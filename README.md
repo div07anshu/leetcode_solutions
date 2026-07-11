@@ -29,10 +29,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0523-continuous-subarray-sum](https://github.com/div07anshu/leetcode_solutions/tree/master/0523-continuous-subarray-sum) |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/div07anshu/leetcode_solutions/tree/master/0947-most-stones-removed-with-same-row-or-column) |
 ## Array
 |  |
 | ------- |
+| [0523-continuous-subarray-sum](https://github.com/div07anshu/leetcode_solutions/tree/master/0523-continuous-subarray-sum) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/div07anshu/leetcode_solutions/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## Two Pointers
 |  |
@@ -67,4 +69,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/div07anshu/leetcode_solutions/tree/master/1976-number-of-ways-to-arrive-at-destination) |
+## Math
+|  |
+| ------- |
+| [0523-continuous-subarray-sum](https://github.com/div07anshu/leetcode_solutions/tree/master/0523-continuous-subarray-sum) |
+## Prefix Sum
+|  |
+| ------- |
+| [0523-continuous-subarray-sum](https://github.com/div07anshu/leetcode_solutions/tree/master/0523-continuous-subarray-sum) |
 <!---LeetCode Topics End-->
