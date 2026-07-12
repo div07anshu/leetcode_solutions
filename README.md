@@ -33,12 +33,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0525-contiguous-array](https://github.com/div07anshu/leetcode_solutions/tree/master/0525-contiguous-array) |
 | [0930-binary-subarrays-with-sum](https://github.com/div07anshu/leetcode_solutions/tree/master/0930-binary-subarrays-with-sum) |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/div07anshu/leetcode_solutions/tree/master/0947-most-stones-removed-with-same-row-or-column) |
+| [1331-rank-transform-of-an-array](https://github.com/div07anshu/leetcode_solutions/tree/master/1331-rank-transform-of-an-array) |
 ## Array
 |  |
 | ------- |
 | [0523-continuous-subarray-sum](https://github.com/div07anshu/leetcode_solutions/tree/master/0523-continuous-subarray-sum) |
 | [0525-contiguous-array](https://github.com/div07anshu/leetcode_solutions/tree/master/0525-contiguous-array) |
 | [0930-binary-subarrays-with-sum](https://github.com/div07anshu/leetcode_solutions/tree/master/0930-binary-subarrays-with-sum) |
+| [1331-rank-transform-of-an-array](https://github.com/div07anshu/leetcode_solutions/tree/master/1331-rank-transform-of-an-array) |
 | [2300-successful-pairs-of-spells-and-potions](https://github.com/div07anshu/leetcode_solutions/tree/master/2300-successful-pairs-of-spells-and-potions) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/div07anshu/leetcode_solutions/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## Two Pointers
@@ -67,6 +69,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sorting
 |  |
 | ------- |
+| [1331-rank-transform-of-an-array](https://github.com/div07anshu/leetcode_solutions/tree/master/1331-rank-transform-of-an-array) |
 | [2300-successful-pairs-of-spells-and-potions](https://github.com/div07anshu/leetcode_solutions/tree/master/2300-successful-pairs-of-spells-and-potions) |
 | [3534-path-existence-queries-in-a-graph-ii](https://github.com/div07anshu/leetcode_solutions/tree/master/3534-path-existence-queries-in-a-graph-ii) |
 ## Topological Sort
