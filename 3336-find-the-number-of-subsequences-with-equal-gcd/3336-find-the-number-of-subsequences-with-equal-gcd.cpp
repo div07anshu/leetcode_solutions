@@ -1,29 +1,32 @@
 class Solution {
 public:
-    int dp[201][201][201];
     int mod = 1e9 + 7;
     int subsequencePairCount(vector<int>& nums) {
-        memset(dp, -1, sizeof(dp));
-        return solve(nums, 0, 0, 0);
-    }
+        int n = nums.size();
+        int maxe = *max_element(nums.begin(), nums.end());
+        int dp[n + 1][maxe + 1][maxe + 1];
 
-    int solve(vector<int>& nums, int i, int g1, int g2) {
-        if (i == nums.size()) {
-            if (g1 != 0 && g2 != 0 && g1 == g2) {
-                return 1;
+        for (int first = 0; first <= maxe; first++) {
+            for (int sec = 0; sec <= maxe; sec++) {
+                bool bothNotEmpty = (first != 0 && sec != 0);
+                bool gcdEqual = (first == sec);
+
+                dp[n][first][sec] = bothNotEmpty && gcdEqual;
             }
-
-            return 0;
         }
 
-        if (dp[i][g1][g2] != -1) {
-            return dp[i][g1][g2];
+        for (int i = n - 1; i >= 0; i--) {
+            for (int first = maxe; first >= 0; first--) {
+                for (int sec = maxe; sec >= 0; sec--) {
+                    int skip = dp[i + 1][first][sec];
+                    int take1 = dp[i + 1][gcd(first, nums[i])][sec];
+                    int take2 = dp[i + 1][first][gcd(sec, nums[i])];
+
+                    dp[i][first][sec] = (((skip + take1) % mod) + take2) % mod;
+                }
+            }
         }
 
-        int skip = solve(nums, i + 1, g1, g2);
-        int t1 = solve(nums, i + 1, (g1 == 0 ? nums[i] : gcd(g1, nums[i])), g2);
-        int t2 = solve(nums, i + 1, g1, (g2 == 0 ? nums[i] : gcd(nums[i], g2)));
-
-        return dp[i][g1][g2] = ((skip + t1) % mod + t2) % mod;
+        return dp[0][0][0];
     }
 };
