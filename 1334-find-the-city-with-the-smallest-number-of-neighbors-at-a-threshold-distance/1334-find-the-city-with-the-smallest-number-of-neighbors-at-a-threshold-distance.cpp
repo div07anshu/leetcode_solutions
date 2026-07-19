@@ -52,7 +52,7 @@ public:
         int cnt = 0;
 
         for (int i = 0; i < n; i++) {
-            if (dis[i] <= th) {
+            if (i != src && dis[i] <= th) {
                 cnt++;
             }
         }
