@@ -1,18 +1,18 @@
 class Solution {
 public:
     string smallestPalindrome(string s) {
-        map<char, int> mp;
+        vector<int> hash(26, 0);
         int n = s.size();
         string l = "";
         string mid = "";
 
         for (auto x : s) {
-            mp[x]++;
+            hash[x - 'a']++;
         }
 
-        for (auto it : mp) {
-            char x = it.first;
-            int freq = it.second;
+        for (int k = 0; k < 26; k++) {
+            char x = 'a' + k;
+            int freq = hash[k];
 
             for (int i = 0; i < freq / 2; i++) {
                 l += x;
