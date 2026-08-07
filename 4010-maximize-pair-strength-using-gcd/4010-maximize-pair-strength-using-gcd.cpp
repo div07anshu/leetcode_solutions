@@ -2,7 +2,6 @@ class Solution {
 public:
     long long maxPairStrength(vector<int>& nums) {
         int n = nums.size();
-        sort(nums.begin(), nums.end());
         long long maxl = LLONG_MIN;
 
         for (int i = 0; i < n; i++) {
