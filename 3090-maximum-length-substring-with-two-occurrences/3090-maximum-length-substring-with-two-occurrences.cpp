@@ -3,14 +3,14 @@ public:
     int maximumLengthSubstring(string s) {
         int n = s.size();
         int maxl = 1;
-        unordered_map<char, int> mp;
+        vector<int> hash(26, 0);
         int i = 0, j = 0;
 
         while (i < n) {
-            mp[s[i]]++;
+            hash[s[i] - 'a']++;
 
-            while (mp[s[i]] > 2) {
-                mp[s[j]]--;
+            while (hash[s[i] - 'a'] > 2) {
+                hash[s[j] - 'a']--;
                 j++;
             }
 
