@@ -10,15 +10,16 @@ public:
             mp[x]++;
         }
 
-        if (xorr == 0) {
-            if (mp.size() == 1 && mp[0] == n) {
-                return 0;
-            }
-
-            return n - 1;
-
-        } else {
+        if (xorr != 0) {
             return n;
         }
+
+        for (auto x : nums) {
+            if (x != 0) {
+                return n - 1;
+            }
+        }
+
+        return 0;
     }
 };
