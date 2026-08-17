@@ -8,7 +8,7 @@ public:
             int sum = 0;
 
             if (k == 0) {
-                code[i] = 0;
+                ans[i] = 0;
             } else if (k < 0) {
                 int a = -1 * k;
                 for (int j = i - 1; j >= i - a; j--) {
