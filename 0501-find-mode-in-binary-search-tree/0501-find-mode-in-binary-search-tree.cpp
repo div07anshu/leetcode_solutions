@@ -13,30 +13,39 @@
 using Node = TreeNode;
 class Solution {
 public:
-    unordered_map<int, int> mp;
-    int maxf = 0;
+    bool hasprev = false;
+    int prev;
+    int maxfreq = 0, currfreq = 0;
+
     vector<int> findMode(TreeNode* root) {
-        vector<int> ans;
-        dfs(root);
-
-        for (auto it : mp) {
-            if (it.second == maxf) {
-                ans.push_back(it.first);
-            }
-        }
-
-        return ans;
+        vector<int> arr;
+        dfs(root, arr);
+        return arr;
     }
 
-    void dfs(Node* root) {
+    void dfs(Node* root, vector<int>& arr) {
         if (root == nullptr) {
             return;
         }
 
-        mp[root->val]++;
-        maxf = max(maxf, mp[root->val]);
+        dfs(root->left, arr);
 
-        dfs(root->left);
-        dfs(root->right);
+        if (hasprev && prev == root->val) {
+            currfreq++;
+        } else {
+            hasprev = true;
+            prev = root->val;
+            currfreq = 1;
+        }
+
+        if (currfreq > maxfreq) {
+            maxfreq = currfreq;
+            arr.clear();
+            arr.push_back(root->val);
+        } else if (currfreq == maxfreq) {
+            arr.push_back(root->val);
+        }
+
+        dfs(root->right, arr);
     }
 };
