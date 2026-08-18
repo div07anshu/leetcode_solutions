@@ -13,7 +13,7 @@
 using Node = TreeNode;
 class Solution {
 public:
-    map<int, int> mp;
+    unordered_map<int, int> mp;
     int maxf = 0;
     vector<int> findMode(TreeNode* root) {
         vector<int> ans;
