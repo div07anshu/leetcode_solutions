@@ -29,7 +29,7 @@ public:
         idx--;
         int i = st;
 
-        for (; i < ed; i++) {
+        for (; i <= ed; i++) {
             if (inorder[i] == rootVal) {
                 break;
             }
