@@ -17,7 +17,7 @@ public:
     int maxf = 0;
     vector<int> findMode(TreeNode* root) {
         vector<int> ans;
-        dfs(root, ans);
+        dfs(root);
 
         for (auto it : mp) {
             if (it.second == maxf) {
@@ -28,7 +28,7 @@ public:
         return ans;
     }
 
-    void dfs(Node* root, vector<int>& ans) {
+    void dfs(Node* root) {
         if (root == nullptr) {
             return;
         }
@@ -36,7 +36,7 @@ public:
         mp[root->val]++;
         maxf = max(maxf, mp[root->val]);
 
-        dfs(root->left, ans);
-        dfs(root->right, ans);
+        dfs(root->left);
+        dfs(root->right);
     }
 };
