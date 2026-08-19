@@ -1,12 +1,9 @@
 using pii = pair<int, int>;
-using vpii = vector<pii>;
-using gpii = greater<pii>;
-
 class Solution {
 public:
     int minCostConnectPoints(vector<vector<int>>& p) {
         int n = p.size();
-        vector<vpii> adj(n);
+        vector<vector<pair<int, int>>> adj(n);
 
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
@@ -16,13 +13,13 @@ public:
             }
         }
 
-        priority_queue<pii, vpii, gpii> pq;
+        priority_queue<pii, vector<pii>, greater<pii>> pq;
+        int cost = 0;
         vector<int> vis(n, 0);
         pq.push({0, 0});
-        int sum = 0;
-
+        
         while (!pq.empty()) {
-            auto [cst, node] = pq.top();
+            auto [dis, node] = pq.top();
             pq.pop();
 
             if (vis[node]) {
@@ -30,7 +27,7 @@ public:
             }
 
             vis[node] = 1;
-            sum += cst;
+            cost += dis;
 
             for (auto [nbr, wt] : adj[node]) {
                 if (!vis[nbr]) {
@@ -39,6 +36,6 @@ public:
             }
         }
 
-        return sum ;
+        return cost;
     }
 };
