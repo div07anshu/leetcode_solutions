@@ -19,31 +19,20 @@ public:
         return count;
     }
 
-    void dfs(Node* node) {
+    pair<int, int> dfs(Node* node) {
         if (node == nullptr) {
-            return;
+            return {0, 0};
         }
 
-        int sum = 0, cnt = 0;
-        solve(node, sum, cnt);
-        int avg = sum / cnt;
+        auto lh = dfs(node->left);
+        auto rh = dfs(node->right);
+        int sum = node->val + lh.first + rh.first;
+        int cnt = 1 + lh.second + rh.second;
 
-        if (node->val == avg) {
+        if (node->val == sum / cnt) {
             count++;
         }
 
-        dfs(node->left);
-        dfs(node->right);
-    }
-
-    void solve(Node* node, int& sum, int& cnt) {
-        if (node == nullptr) {
-            return;
-        }
-
-        sum += node->val;
-        cnt++;
-        solve(node->left, sum, cnt);
-        solve(node->right, sum, cnt);
+        return {sum, cnt};
     }
 };
