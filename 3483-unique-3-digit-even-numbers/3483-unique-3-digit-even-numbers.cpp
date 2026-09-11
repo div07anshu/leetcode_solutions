@@ -3,7 +3,7 @@ public:
     int totalNumbers(vector<int>& digits) {
         int n = digits.size();
         int cnt = 0;
-        set<vector<int>> st;
+        unordered_set<int> st;
         // i -> start , j -> mid , k -> end ;
 
         for (int i = 0; i < n; i++) {
@@ -13,7 +13,8 @@ public:
             for (int j = 0; j < n; j++) {
                 for (int k = 0; k < n; k++) {
                     if (j != i && k != j && k != i && digits[k]) {
-                        st.insert({digits[i], digits[j], digits[k]});
+                        int num = digits[k] * 100 + digits[j] * 10 + digits[i];
+                        st.insert(num);
                     }
                 }
             }
