@@ -20,7 +20,7 @@ public:
                             continue;
                         }
 
-                        if (img1[i][j] == 1 && img2[i + l][j + d] == 1) {
+                        if (img1[i][j] == 1 && img2[ni][nj] == 1) {
                             cnt++;
                         }
                     }
