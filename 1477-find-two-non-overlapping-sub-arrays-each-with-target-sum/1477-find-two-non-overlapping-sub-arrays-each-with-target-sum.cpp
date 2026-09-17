@@ -2,7 +2,8 @@ class Solution {
 public:
     int minSumOfLengths(vector<int>& arr, int target) {
         int n = arr.size();
-        vector<int> best(n, INT_MAX);
+        vector<int> bestminIdx(n, INT_MAX);
+        int best = INT_MAX;
 
         int ans = INT_MAX;
         int sum = 0, l = 0;
@@ -13,17 +14,17 @@ public:
             while (sum > target)
                 sum -= arr[l++];
 
-            if (r > 0)
-                best[r] = best[r - 1];
-
             if (sum == target) {
                 int len = r - l + 1;
 
-                if (l > 0 && best[l - 1] != INT_MAX)
-                    ans = min(ans, len + best[l - 1]);
+                if (l > 0 && bestminIdx[l - 1] != INT_MAX) {
+                    ans = min(ans, len + bestminIdx[l - 1]);
+                }
 
-                best[r] = min(best[r], len);
+                best = min(best, len);
             }
+
+            bestminIdx[r] = best ;
         }
 
         return ans == INT_MAX ? -1 : ans;
