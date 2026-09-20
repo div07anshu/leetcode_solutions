@@ -5,8 +5,7 @@ public:
     int maxProfit(vector<int>& prices, int fee) {
         memset(dp, -1, sizeof(dp));
         int n = prices.size();
-        int tot = solve(0, 0, prices, fee);
-        return tot < 0 ? 0 : tot;
+        return solve(0, 0, prices, fee);
     }
 
     int solve(int i, int b, vi& p, int fee) {
