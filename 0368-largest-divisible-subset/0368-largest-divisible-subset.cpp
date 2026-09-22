@@ -8,7 +8,6 @@ public:
         sort(nums.begin(), nums.end());
         memset(dp, -1, sizeof(dp));
         solve(0, -1, nums);
-        vector<int> ans;
 
         int i = 0, prev = -1;
 
