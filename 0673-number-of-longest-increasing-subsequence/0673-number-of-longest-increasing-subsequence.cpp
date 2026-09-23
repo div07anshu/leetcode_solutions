@@ -9,7 +9,7 @@ public:
         for (int i = 0; i < n; i++) {
             for (int prev = 0; prev < i; prev++) {
                 if (nums[prev] < nums[i] && 1 + dp[prev] > dp[i]) {
-                    dp[i] = max(1 + dp[prev], dp[i]);
+                    dp[i] = dp[prev] + 1;
                     maxl = max(maxl, dp[i]);
                     cnt[i] = cnt[prev];
                 } else if (nums[prev] < nums[i] && 1 + dp[prev] == dp[i]) {
