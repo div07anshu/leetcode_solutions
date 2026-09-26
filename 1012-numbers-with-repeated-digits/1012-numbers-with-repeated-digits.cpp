@@ -1,6 +1,6 @@
 class Solution {
 public:
-    // [pos][tight][mask][started];
+    // [pos][tight][mask][st];
     int dp[10][2][1024][2];
     int numDupDigitsAtMostN(int n) {
         // n - cnt(non-repeated_digit)
@@ -9,6 +9,8 @@ public:
         return n - solve(0, 1, 0, 0, s);
     }
 
+    // st tells us whether there is still leading zero or not...
+    // it is required so that it doesn't cnt 005 as num with rept digit...
     int solve(int pos, int tight, int mask, int st, string& s) {
         if (pos == s.size()) {
             return st;
