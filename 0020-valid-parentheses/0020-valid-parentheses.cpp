@@ -3,40 +3,25 @@ public:
     bool isValid(string s) {
         stack<char> st;
 
-        for (int i = 0; i < s.size(); i++) {
-            if (s[i] == ')' && !st.empty()) {
-                if (st.top() != '(') {
+        for (char c : s) {
+            if (c == '(' || c == '{' || c == '[') {
+                st.push(c);
+            } else {
+                if (st.empty()) {
                     return false;
-                } else {
-                    st.pop();
                 }
-            }
 
-            else if (s[i] == '}' && !st.empty()) {
-                if (st.top() != '{') {
+                if ((c == ')' && st.top() != '(') ||
+                    (c == '}' && st.top() != '{') ||
+                    (c == ']' && st.top() != '[')) {
+
                     return false;
-                } else {
-                    st.pop();
                 }
-            }
 
-            else if (s[i] == ']' && !st.empty()) {
-                if (st.top() != '[') {
-                    return false;
-                } else {
-                    st.pop();
-                }
-            }
-
-            else {
-                st.push(s[i]);
+                st.pop();
             }
         }
 
-        if (st.empty()) {
-            return true;
-        } else {
-            return false;
-        }
+        return st.empty();
     }
 };
