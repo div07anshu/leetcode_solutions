@@ -20,12 +20,10 @@ public:
         int n = arr.size();
         if (mp.count(val)) {
             int idx = mp[val];
-            int last = arr.back(); // last element ;
-            swap(arr[idx], arr.back());
+            arr[idx] = arr.back();
 
-            mp[last] = idx;
+            mp[arr.back()] = idx;
             mp.erase(val);
-
             arr.pop_back();
             return true;
         }
@@ -33,11 +31,7 @@ public:
         return false;
     }
 
-    int getRandom() {
-        int len = arr.size();
-        int idx = rand() % len;
-        return arr[idx];
-    }
+    int getRandom() { return arr[rand() % arr.size()]; }
 };
 
 /**
