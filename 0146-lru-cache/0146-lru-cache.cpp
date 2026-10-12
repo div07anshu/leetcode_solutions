@@ -33,7 +33,7 @@ public:
             if (lis.size() == limit) {
                 auto it = lis.begin();
                 mp.erase(it->first);
-                lis.erase(it);
+                lis.pop_front();
             }
 
             lis.push_back({key, value});
