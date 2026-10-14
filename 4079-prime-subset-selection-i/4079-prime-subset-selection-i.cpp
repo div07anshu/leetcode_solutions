@@ -24,6 +24,8 @@ public:
         int sum = 0;
 
         while (i <= n && sum <= s) {
+            if (sum + i > s)
+                break;
             if (isPrime[i] && sum + i <= s) {
                 sum += i;
                 ans.push_back(i);
