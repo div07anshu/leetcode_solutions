@@ -13,14 +13,16 @@
 using Node = TreeNode;
 class Solution {
 public:
+    map<pair<int, int>, vector<Node*>> mp;
     vector<TreeNode*> generateTrees(int n) { return solve(1, n); }
 
     vector<Node*> solve(int l, int r) {
         if (l > r) {
             return {nullptr};
-        } else if (l == r) {
-            Node* node = new Node(l);
-            return {node};
+        }
+
+        if (mp.count({l, r})) {
+            return mp[{l, r}];
         }
 
         vector<Node*> result;
@@ -39,6 +41,6 @@ public:
             }
         }
 
-        return result;
+        return mp[{l, r}] = result;
     }
 };
