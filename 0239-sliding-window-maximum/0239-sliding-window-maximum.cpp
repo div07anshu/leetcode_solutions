@@ -7,10 +7,13 @@ public:
         int n = nums.size();
 
         for (int i = 0; i < n; i++) {
+
+            // Remove indices outside the current window
             while (!dq.empty() && dq.front() <= i - k) {
                 dq.pop_front();
             }
-
+            
+            // Remove smaller elements from the back
             while (!dq.empty() && nums[i] > nums[dq.back()]) {
                 dq.pop_back();
             }
